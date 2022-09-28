@@ -8,6 +8,4 @@ ${BROWSER}
 
 *** Keywords ***
 Start Browser
-    Open Browser    ${${ENVIRONMENT}_URL}       ${BROWSER}
-    MAXIMIZE BROWSER WINDOW
-    Set Browser Implicit Wait    3
+    Open Browser  ${${ENVIRONMENT}_URL}     ${BROWSER}

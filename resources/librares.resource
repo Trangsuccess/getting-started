@@ -1,6 +1,6 @@
 *** Settings ***
 Library     OperatingSystem
 Library     SeleniumLibrary
-Library        ../lib/GetRandom.py
+Library        ../libraries/GetRandom.py
 Variables       ../config/env.py
 Variables       ../variables/webElements.py
