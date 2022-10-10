@@ -4,3 +4,5 @@ selenium~=4.4.3
 webdrivermanager~=0.10.0
 robotframework-selenium2library
 testObject~=1.0.0.post1
+robotframework-datadriver
+robotframework-csvlibrary~=0.0.5

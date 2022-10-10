@@ -22,5 +22,5 @@ click Sign up Button
     click button   ${signupButtonSignup}
 
 Alert message should be opened
-    [Arguments]         ${mesage}
-    alert should be present     ${mesage}
+    [Arguments]         ${message}
+    alert should be present     ${message}

@@ -4,12 +4,6 @@ Documentation     This is a resource file, that can contain variables and keywor
 Resource            ../librares.resource
 
 *** Keywords ***
-Welcome Page should be loaded
-    [Arguments]     ${username}
-    wait until element is visible    ${navigationBarWelcomeLink}
-    element text should be      ${navigationBarWelcomeLink}     Welcome ${username}
-
-
 Click Home link at navigation bar
     click link      ${navigationBarHomeLink}
 
@@ -22,8 +16,8 @@ Click About Us link at navigation bar
 Click Cart link at navigation bar
     click link      ${navigationBarCartLink}
 
-Sign up link at navigation bar should not be Visible
-    Element Should Not Be Visible    ${navigationBarSignUpLink}
+Click Sign up link at navigation bar
+    click link    ${navigationBarSignUpLink}
 
-Login link at navigation bar should not be Visible
-    Element Should Not Be Visible    ${navigationBarCartLink}
+Click Login link at navigation bar
+    click link    ${navigationBarLogInLink}
