@@ -21,16 +21,15 @@ linkForgotPassword = "xpath://a[@href='/forgot-password']"
 toastTextLogin = "xpath://div[contains(@class, 'Toastify__toast-body')]"
 
 # Add New User
-txtFirstNameNewUser = ""
-txtLastNameNewUser = ""
-txtEmailNewUser = ""
-txtPhoneNumberNewUser =""
-cboRoleNewUser =""
-btnSaveNewUser =""
+txtFirstNameNewUser = "xpath://input[@name='firstName']"
+txtLastNameNewUser = "xpath://input[@name='lastName']"
+txtEmailNewUser = "xpath://input[@name='email']"
+txtPhoneNumberNewUser = "xpath://[@name='phoneNumber']//following::input"
+txtJobTitleNewUser = "xpath://[@name='jobTitle']//following::input"
+cboRoleNewUser = "xpath=//div[@id='role']/div/div/div[2]"
+chkAllDealerNewUser = "id:includeAllDealer"
+btnSaveNewUser = "xpath://*[@type='submit']//following::button"
 
 # User Setting
-btnAddUserSetting = ""
-
-
-
-
+btnAddUserSetting = "xpath://button[text()='Add']"
+dgdUsers = "xpath://table/tbody/tr"

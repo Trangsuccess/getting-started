@@ -39,3 +39,11 @@ Read CSV file
 Write CSC file
     [Arguments]     ${fiel_path}    @{list}
    Append To File    ${fiel_path}    @{list}
+
+
+Click To Element
+    [Arguments]  ${locator}
+    ${x}=        Get Horizontal Position  ${locator}
+
+    ${y}=        Get Vertical Position    ${locator}
+    Click Element At Coordinates    ${locator}    ${x}    ${y}

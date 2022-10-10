@@ -16,15 +16,14 @@ Open Gateway Management screen
 Open Customer Management menu
     click link      ${linkCustomerManagement}
 Open Client Setting screen
-    Open Customer Management menu
     click link      ${linkClientSetting}
 
 Open Dealer Setting screen
-    Open Customer Management menu
     click link      ${linkDealerSetting}
 
 Open User Setting screen
-    Element Should Not Be Visible    ${linkUserSetting}
+    Click Element    ${linkUserSetting}
+    Set Browser Implicit Wait    5
 
 Click button Log Out
     Click Link    ${btnLogOut}

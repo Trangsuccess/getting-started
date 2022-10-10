@@ -12,11 +12,13 @@ ${BROWSER}        firefox
 Open the Login screen
     Open Browser        ${${ENVIRONMENT}_URL}       ${BROWSER}
     Maximize Browser Window
-    Title Should Be    Zeggo
+    Title Should Be    BMS
 
 Login as Super Admin
-    login_keywords.Input Your Name    ${${ENVIRONMENT}_QA_UserName}
-    login_keywords.Input Password    ${${ENVIRONMENT}_QA_Password}
-    login_keywords.Click LOGIN button
-    #Wait Until Page Contains    text
+    Log To Console    ${${ENVIRONMENT}_UserName}
+    Log To Console    ${${ENVIRONMENT}_Password}
+    login.Input Email    ${${ENVIRONMENT}_UserName}
+    login.Input Password    ${${ENVIRONMENT}_Password}
+    login.Click LOGIN button
+    Set Browser Implicit Wait    3
 
