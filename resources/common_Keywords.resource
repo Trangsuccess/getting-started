@@ -40,10 +40,11 @@ Write CSC file
     [Arguments]     ${fiel_path}    @{list}
    Append To File    ${fiel_path}    @{list}
 
+Run Keyword Until Success
+    [Arguments]     ${Keyword}      @{KWARGS}
+    Wait Until Keyword Succeeds    20s    1s    ${Keyword}      @{KWARGS}
 
-Click To Element
-    [Arguments]  ${locator}
-    ${x}=        Get Horizontal Position  ${locator}
-
-    ${y}=        Get Vertical Position    ${locator}
-    Click Element At Coordinates    ${locator}    ${x}    ${y}
+Wait For And Select From React List By Index
+    [Arguments]     ${locator}     ${target}
+    ${LIST}=    Get React List Labels     ${locator}
+    Input Text    ${locator}    ${LIST}[${target}]

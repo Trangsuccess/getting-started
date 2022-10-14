@@ -1,7 +1,6 @@
 *** Settings ***
 Library     OperatingSystem
-Library     SeleniumLibrary
+Library     Zoomba.GUILibrary
 Variables       ../config/env.py
 Variables       ../variables/webElements.py
 Library     String
-

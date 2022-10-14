@@ -2,21 +2,19 @@
 Resource        ../../../resources/keywords.resource
 Resource        ../../../resources/librares.resource
 Suite Setup     Open the Login screen
-Test Setup      Login as Super Admin
 Suite Teardown  Close All Browsers
 
 *** Variables ***
 ${firstname}
 ${lastname}
 ${email}
-${Role}         BMS Administrator
+${Role}         Dealer Administrator
 ${phone}
 
 *** Test Cases ***
 Super Admin create a ${role} User
+    Open the Login screen
+    Login as Super Admin
     dashboard.Open User Setting screen
     userSetting.Click button Add
-    addNewUser.Input all required fields   ${firstname}    ${lastname}    ${email}
-    addNewUser.Choose ${Role} Assignment
-    addNewUser.Input option fields    $phone
-    addNewUser.Click button Save
+    addNewUser.Select ${Role} Assignment

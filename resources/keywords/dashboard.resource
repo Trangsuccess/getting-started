@@ -5,25 +5,25 @@ Resource            ../librares.resource
 
 *** Keywords ***
 Open Device Model Management screen
-    click link      ${linkDeviceModalManagement}
+    Zoomba.GUILibrary.click link      ${linkDeviceModalManagement}
 
 Open Subscription Management screen
-    click link      ${linkSubscriptionManagement}
+    Zoomba.GUILibrary.click link      ${linkSubscriptionManagement}
 
 Open Gateway Management screen
-    click link      ${linkGatewayManagement}
+    Zoomba.GUILibrary.click link      ${linkGatewayManagement}
 
 Open Customer Management menu
-    click link      ${linkCustomerManagement}
+    Zoomba.GUILibrary.click link      ${linkCustomerManagement}
 Open Client Setting screen
-    click link      ${linkClientSetting}
+    Zoomba.GUILibrary.click link      ${linkClientSetting}
 
 Open Dealer Setting screen
-    click link      ${linkDealerSetting}
+   Zoomba.GUILibrary.click link      ${linkDealerSetting}
 
 Open User Setting screen
-    Click Element    ${linkUserSetting}
-    Set Browser Implicit Wait    5
+    Zoomba.GUILibrary.Click Element    ${linkUserSetting}
+    Zoomba.GUILibrary.Set Browser Implicit Wait    5
 
 Click button Log Out
-    Click Link    ${btnLogOut}
+    Zoomba.GUILibrary.Click Link    ${btnLogOut}

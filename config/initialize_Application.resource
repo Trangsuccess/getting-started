@@ -10,9 +10,9 @@ ${BROWSER}        firefox
 
 *** Keywords ***
 Open the Login screen
-    Open Browser        ${${ENVIRONMENT}_URL}       ${BROWSER}
-    Maximize Browser Window
-    Title Should Be    BMS
+    Zoomba.GUILibrary.Open Browser        ${${ENVIRONMENT}_URL}       ${BROWSER}
+    Zoomba.GUILibrary.Maximize Browser Window
+    Zoomba.GUILibrary.Title Should Be    BMS
 
 Login as Super Admin
     Log To Console    ${${ENVIRONMENT}_UserName}
@@ -20,5 +20,5 @@ Login as Super Admin
     login.Input Email    ${${ENVIRONMENT}_UserName}
     login.Input Password    ${${ENVIRONMENT}_Password}
     login.Click LOGIN button
-    Set Browser Implicit Wait    3
+    Zoomba.GUILibrary.Set Browser Implicit Wait    3
 

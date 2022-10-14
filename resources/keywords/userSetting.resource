@@ -6,4 +6,4 @@ Resource            ../librares.resource
 
 *** Keywords ***
 Click button Add
-    Click Button      ${btnAddUserSetting}
+    Zoomba.GUILibrary.Click Button      ${btnAddUserSetting}

@@ -4,7 +4,6 @@ import csv
 
 __version__ = '1.0.0'
 
-
 class GetRandom:
     ROBOT_LIBRARY_VERSION = __version__
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'

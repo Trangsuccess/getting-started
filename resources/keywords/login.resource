@@ -7,23 +7,23 @@ Library    Telnet
 *** Keywords ***
 Input Email
     [Arguments]     ${Email}
-    wait until element is visible  ${txtEmailLogin}
-    Clear Element Text    ${txtEmailLogin}
-    input text      ${txtEmailLogin}    ${Email}
+    Zoomba.GUILibrary.wait until element is visible  ${txtEmailLogin}
+    Zoomba.GUILibrary.Clear Element Text    ${txtEmailLogin}
+    Zoomba.GUILibrary.input text      ${txtEmailLogin}    ${Email}
 
 Input Password
     [Arguments]     ${Password}
-    wait until element is visible  ${txtPasswordLogin}
-    Clear Element Text   ${txtPasswordLogin}
-    input text      ${txtPasswordLogin}    ${Password}
+    Zoomba.GUILibrary.wait until element is visible  ${txtPasswordLogin}
+    Zoomba.GUILibrary.Clear Element Text   ${txtPasswordLogin}
+    Zoomba.GUILibrary.input text      ${txtPasswordLogin}    ${Password}
 
 Click LOGIN button
-    Wait Until Element Is Visible      ${btnLogin}
-    Click Button      ${btnLogin}
+    Zoomba.GUILibrary.Wait Until Element Is Visible      ${btnLogin}
+    Zoomba.GUILibrary.Click Button      ${btnLogin}
 
 Toast message should be ${toastMessage}
-    Wait until element is visible   ${toastTextLogin}
-    ${message}=  Get text  ${toastTextLogin}
+    Zoomba.GUILibrary.Wait until element is visible   ${toastTextLogin}
+    ${message}=  Zoomba.GUILibrary.Get text  ${toastTextLogin}
     Convert To Bytes    ${message}
     Log To Console    ${message}
     Log To Console    ${toastMessage}
