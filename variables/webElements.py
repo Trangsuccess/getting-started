@@ -33,3 +33,6 @@ btnSaveNewUser = "xpath://button[@type='submit']"
 # User Setting
 btnAddUserSetting = "xpath://button[text()='Add']"
 dgdUsers = "xpath://table/tbody/tr"
+
+# Signup
+txtSignupUsername = "xpath://button[text()='Add']"

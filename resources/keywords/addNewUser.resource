@@ -1,37 +1,31 @@
 *** Settings ***
 Documentation     This is a resource file, that can contain variables and keywords.
 ...               Keywords defined here can be used where this Keywords.resource in loaded.
-Resource            ../librares.resource
-Resource            ../keywords.resource
+
+Resource        ../../libraries/importlibs.resource
+Resource        ../../variables/variables.resource
 Library    XML
 Library    Collections
-Library     ../../libraries/GUItest.py
 
 *** Keywords ***
 Input First Name
     [Arguments]     ${firstname}
-    Zoomba.GUILibrary.Input Text    ${txtFirstNameNewUser}    ${firstname}
+    Input Text    ${txtFirstNameNewUser}    ${firstname}
 
 Input Last Name
     [Arguments]     ${lastname}
-    Zoomba.GUILibrary.Input Text    ${txtLastNameNewUser}    ${lastname}
-Input Email
+    Input Text    ${txtLastNameNewUser}    ${lastname}
+
+Input Your Email
     [Arguments]     ${email}
-    Zoomba.GUILibrary.Input Text    ${txtEmailNewUser}    ${email}
+    Input Text    ${txtEmailNewUser}    ${email}
 
 Input Phone number
     [Arguments]     ${phone}
-    Zoomba.GUILibrary.Input Text    ${txtPhoneNumberNewUser}    ${phone}
+    Input Text    ${txtPhoneNumberNewUser}    ${phone}
 
 Select ${Role} Assignment
    Open Context Menu    ${cboRoleNewUser}
-
-
-
-
-
-Check checkbox All Dealer
-
 
 Click button Save
     Click Button    ${btnSaveNewUser}

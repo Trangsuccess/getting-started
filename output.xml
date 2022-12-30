@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221230 16:23:40.426" rpa="false" schemaversion="3">
+<suite id="s1" name="invalidLogin" source="C:\Users\trang.hoang\PycharmProjects\gettingStarted\testSuites\loginTests\invalidLogin.robot">
+<kw name="Log path" library="initialize_Application" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>C:\\Users\\trang.hoang\\PycharmProjects\\gettingStarted\\config</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221230 16:23:40.778" endtime="20221230 16:23:40.778"/>
+</kw>
+<status status="PASS" starttime="20221230 16:23:40.777" endtime="20221230 16:23:40.778"/>
+</kw>
+<test id="s1-t1" name="Empty username and password" line="13">
+<kw name="Open the Login screen" library="initialize_Application" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${${ENVIRONMENT}_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221230 16:23:40.782" level="INFO">Opening browser 'firefox' to base url 'https://sss-iot-admin.azurewebsites.net/login'.</msg>
+<msg timestamp="20221230 16:23:40.784" level="INFO">Firefox driver log is always forced to to: C:\Users\trang.hoang\PycharmProjects\gettingStarted\geckodriver-19.log</msg>
+<status status="PASS" starttime="20221230 16:23:40.782" endtime="20221230 16:23:56.797"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221230 16:23:56.798" endtime="20221230 16:23:56.800"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>BMS</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221230 16:23:56.809" level="INFO">Page title is 'BMS'.</msg>
+<status status="PASS" starttime="20221230 16:23:56.801" endtime="20221230 16:23:56.809"/>
+</kw>
+<status status="PASS" starttime="20221230 16:23:40.782" endtime="20221230 16:23:56.809"/>
+</kw>
+<kw name="Verify invalid login" library="login">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Login with credentials" library="login">
+<arg>${email}</arg>
+<arg>${password}</arg>
+<kw name="Input Email" library="login">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txtEmailLogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221230 16:23:56.815" endtime="20221230 16:23:56.899"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${txtEmailLogin}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221230 16:23:56.899" endtime="20221230 16:23:56.908"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtEmailLogin}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221230 16:23:56.908" level="INFO">Typing text '' into text field 'xpath://input[@name= 'email']'.</msg>
+<status status="PASS" starttime="20221230 16:23:56.908" endtime="20221230 16:23:56.956"/>
+</kw>
+<status status="PASS" starttime="20221230 16:23:56.814" endtime="20221230 16:23:56.956"/>
+</kw>
+<kw name="Input Password">
+<arg>${password}</arg>
+<msg timestamp="20221230 16:23:56.957" level="FAIL">Multiple keywords with name 'Input Password' found. Give the full name of the keyword you want to use:
+    login.Input Password
+    signup.input Password</msg>
+<status status="FAIL" starttime="20221230 16:23:56.957" endtime="20221230 16:23:56.957"/>
+</kw>
+<kw name="Click LOGIN button" library="login">
+<status status="NOT RUN" starttime="20221230 16:23:56.957" endtime="20221230 16:23:56.957"/>
+</kw>
+<kw name="Toast message should be ${toastMessage}" library="login" sourcename="Toast message should be ${toastMessage}">
+<status status="NOT RUN" starttime="20221230 16:23:56.958" endtime="20221230 16:23:56.958"/>
+</kw>
+<status status="FAIL" starttime="20221230 16:23:56.814" endtime="20221230 16:23:56.958"/>
+</kw>
+<kw name="Toast message should be ${toastMessage}" library="login" sourcename="Toast message should be ${toastMessage}">
+<status status="NOT RUN" starttime="20221230 16:23:56.958" endtime="20221230 16:23:56.959"/>
+</kw>
+<status status="FAIL" starttime="20221230 16:23:56.809" endtime="20221230 16:23:56.959"/>
+</kw>
+<status status="FAIL" starttime="20221230 16:23:40.779" endtime="20221230 16:23:56.960">Multiple keywords with name 'Input Password' found. Give the full name of the keyword you want to use:
+    login.Input Password
+    signup.input Password</status>
+</test>
+<doc>This .robot file is a suite
+
+Keywords are imported from the resource file</doc>
+<status status="FAIL" starttime="20221230 16:23:40.427" endtime="20221230 16:23:56.961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="invalidLogin">invalidLogin</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221230 16:23:40.774" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Users\trang.hoang\PycharmProjects\gettingStarted\testSuites\loginTests\invalidLogin.robot", line 0</msg>
+<msg timestamp="20221230 16:23:40.775" level="ERROR">In source file:
+  File "C:\Users\trang.hoang\PycharmProjects\gettingStarted\testSuites\loginTests\invalidLogin.csv", line 0</msg>
+<msg timestamp="20221230 16:23:40.777" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test Template" keyword found for first test case.</msg>
+</errors>
+</robot>

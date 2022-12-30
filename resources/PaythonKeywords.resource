@@ -2,7 +2,9 @@
 Documentation     This .robot file is a suite
 ...
 ...               Keywords are imported from the resource file
-Resource        librares.resource
+
+Resource        ../libraries/importlibs.resource
+Resource        ../variables/variables.resource
 
 *** Variables ***
 #scalar variable syntax ${var} it also a ${list}
@@ -46,5 +48,5 @@ Run Keyword Until Success
 
 Wait For And Select From React List By Index
     [Arguments]     ${locator}     ${target}
-    ${LIST}=    Get React List Labels     ${locator}
-    Input Text    ${locator}    ${LIST}[${target}]
+#    ${LIST}=    Get React List Labels     ${locator}
+#   Input Text    ${locator}    ${LIST}[${target}]

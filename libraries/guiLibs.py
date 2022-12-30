@@ -8,7 +8,8 @@ import importlib
 import  selenium
 
 
-class GUItest():
+class GUILibs:
+
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
     @keyword("Get React List Option")
