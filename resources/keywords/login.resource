@@ -38,13 +38,4 @@ Login with credentials
     login.Click LOGIN button
     Toast message should be ${toastMessage}
 
-Verify valid login
-    [Arguments]     ${email}     ${password}      ${title}
-    Login with credentials       ${email}     ${password}
-    Title Should Be         ${title}
 
-
-Verify invalid login
-    [Arguments]     ${email}     ${password}      ${toastMessage}
-    Login with credentials       ${email}     ${password}
-    Toast message should be ${toastMessage}
